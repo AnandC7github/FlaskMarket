@@ -10,7 +10,7 @@ def about_user(username):
 def about_page():
     return '<h1>About Page</h1>'
 
-@app.route('/')
+@app.route('/homehomehome')
 def home_page():
     return render_template('home.html')
 
