@@ -1,0 +1,22 @@
+<!-- market.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Page</title>
+</head>
+<body>
+    <h1>Market Page</h1>
+
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.name }}</strong> -
+                <span>Barcode: {{ item.barcode }}</span> |
+                <span>Price: ${{ item.price }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
