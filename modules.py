@@ -1,3 +1,6 @@
+from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+
 class Item(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(length=30), nullable=False, unique=True)
