@@ -50,21 +50,11 @@ def market_page():
   }]
   return render_template('market.html', items=items)
   
-@app.route('/depict')
-def new_page():
-    # Query all items from the database
-    items = Item.query.all()
-
-    # Convert items to a list of dictionaries for rendering in the template
-    items_data = [{'id': item.id, 'name': item.name, 'barcode': item.barcode, 'price': item.price}
-                  for item in items]
-
-    return render_template('depict.html', items=items_data)
 
 if __name__ == '__main__':
   with app.app_context():
     db.create_all()
-     #item2 = Item(name="IPhone 10",price = 500, barcode = '846154104234',description = 'this is a description of the item as described before.')
+     #item2 = Item(name="IPhone 10",price = 500, barcode = #'846154104234',description = 'this is a description of the #item as described before.')
      #db.session.add(item2)
      #db.session.commit()
 
