@@ -1,0 +1,8 @@
+{% for item in items %}
+    <li>
+        <strong>{{item.id}}</strong>
+        <strong>{{ item.name }}</strong> -
+        <span>Barcode: {{ item.barcode }}</span> |
+        <span>Price: ${{ item.price }}</span>
+    </li>
+{% endfor %}
